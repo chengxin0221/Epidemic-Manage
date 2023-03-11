@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.info-box {
+  position: relative;
+}
+.info-box .radio {
+  position: absolute;
+  right: 4px;
+  bottom: 8px;
+}
+.info-box .zixun-item {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.06);
+}
+.info-box .zixun-item .head-box {
+  color: #415e92;
+}
+.info-box .zixun-item .head-box .zixun-date {
+  float: right;
+  color: #797878;
+  font-size: 14px;
+  line-height: 21px;
+}
+.info-box .zixun-item .body {
+  display: flex;
+  padding-top: 5px;
+}
+.info-box .zixun-item .body .title {
+  width: 85%;
+  height: 145rpx;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding-top: 6px;
+}
+.info-box .zixun-item .body .zixun-coverImg {
+  width: 265rpx;
+  height: 145rpx;
+}
+

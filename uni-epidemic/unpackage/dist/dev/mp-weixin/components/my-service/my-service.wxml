@@ -1,0 +1,1 @@
+<view class="service"><block wx:for="{{serviceData}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['gotoPage',['$0'],[[['serviceData','',index]]]]]]]}}" class="service-item" bindtap="__e"><image class="service-img" src="{{item.img}}"></image>{{''+item.name+''}}</view></block></view>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.content.data-v-0ddb927a {
+  height: 100vh;
+  background-color: #d2e7f9;
+}
+.content .no-qrcode.data-v-0ddb927a {
+  padding: 20px;
+  font-size: 18px;
+}
+.content .no-qrcode .title.data-v-0ddb927a {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #2626e4;
+  text-align: center;
+}
+.content .no-qrcode .tip.data-v-0ddb927a {
+  margin: 10px 0;
+}
+.content .qrcode-box.data-v-0ddb927a {
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+.content .qrcode-box .qr-box.data-v-0ddb927a {
+  width: 200px;
+  margin: 30px auto;
+}
+

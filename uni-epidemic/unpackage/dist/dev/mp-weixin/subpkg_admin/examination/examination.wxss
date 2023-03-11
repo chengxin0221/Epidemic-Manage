@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.no-data.data-v-7572232e {
+  text-align: center;
+}
+.no-data .nodata-img.data-v-7572232e {
+  width: 446rpx;
+  height: 426rpx;
+  margin-top: 72px;
+}
+.no-data .nodata-text.data-v-7572232e {
+  margin-top: 20px;
+  color: #797979;
+}
+.class-box.data-v-7572232e {
+  margin: 6px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #20517f;
+  box-shadow: -2px 3px 0 #20517f;
+  padding-left: 10px;
+  align-items: center;
+}
+.class-box .class-item.data-v-7572232e {
+  display: inline-block;
+  padding: 6px 6px;
+  margin: 5px;
+  border-radius: 14px;
+}
+.class-box .had-choice.data-v-7572232e {
+  color: white;
+  background-color: #20517f;
+}
+.class-box .no-choice.data-v-7572232e {
+  border: 1px solid #20517f;
+}
+.class-box .icon-turn.data-v-7572232e {
+  display: inline-block;
+  margin-left: 10px;
+}
+.radio-box.data-v-7572232e {
+  margin: 16px 10px 8px;
+}
+.radio-box .radio-text.data-v-7572232e {
+  margin-right: 22px;
+}
+

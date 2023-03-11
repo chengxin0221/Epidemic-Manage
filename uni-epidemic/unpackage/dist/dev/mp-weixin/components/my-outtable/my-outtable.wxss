@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.record {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.record .table {
+  padding-bottom: 10px;
+  text-align: center;
+  width: 600px;
+}
+.record .table .item {
+  width: 4%;
+}
+.record .table .th-item {
+  width: 16%;
+}
+.record .table .table-head {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  align-items: center;
+  font-size: 14px;
+  margin: 5px 0;
+  color: white;
+  background-color: #20517f;
+}
+.record .table .no-data {
+  width: 70%;
+}
+.record .table .table-row {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  margin: 5px;
+  font-size: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.record .table .table-row .item {
+  width: 4%;
+}
+.record .table .table-row .t-item {
+  width: 16%;
+  overflow: hidden;
+}
+

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.search-box.data-v-f86c42ac {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 18px;
+  background-color: #20517f;
+}
+.search-box .inp-item.data-v-f86c42ac {
+  width: 76%;
+  height: 28px;
+  padding: 0 10px;
+  line-height: 28px;
+  border-radius: 12px;
+  background-color: white;
+}
+.search-box .icon-search.data-v-f86c42ac {
+  margin-left: 10px;
+}
+.title-box.data-v-f86c42ac {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+

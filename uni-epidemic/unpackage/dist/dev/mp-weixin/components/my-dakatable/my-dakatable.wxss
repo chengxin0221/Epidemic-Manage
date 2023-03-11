@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.table {
+  text-align: center;
+}
+.table .table-head {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  align-items: center;
+  font-size: 16px;
+  margin: 5px;
+  background-color: #d4e4ff;
+  border-radius: 12px;
+}
+.table .table-head .th-item {
+  width: 33%;
+}
+.table .no-data {
+  padding: 20px 10px;
+  color: #888a94;
+}
+.table .table-row {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  align-items: center;
+  margin: 5px;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.table .table-row .t-item {
+  position: relative;
+  width: 33%;
+}
+.table .table-row .t-item .icon-forward {
+  position: absolute;
+  top: 1px;
+  right: 6px;
+  z-index: 999;
+}
+

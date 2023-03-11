@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.my-search-container.data-v-8ad86a50 {
+  background-color: #87a2d4;
+  height: 50px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my-search-container .inp-search.data-v-8ad86a50 {
+  width: 74%;
+  height: 36px;
+  padding-left: 8px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.my-search-container .btn-search.data-v-8ad86a50 {
+  width: 19%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 5px;
+  color: white;
+  background-color: #4365a4;
+  border-radius: 15px;
+}
+.my-search-container .btn-search .placeholder.data-v-8ad86a50 {
+  font-size: 15px;
+  margin-left: 5px;
+}
+

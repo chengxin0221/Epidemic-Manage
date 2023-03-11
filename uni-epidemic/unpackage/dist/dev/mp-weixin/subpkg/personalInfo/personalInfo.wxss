@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container .img-name-box.data-v-3bba558c {
+  height: 400rpx;
+  background-color: #d4e4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+.container .img-name-box .img-box.data-v-3bba558c {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.container .img-name-box .img-box .info-img.data-v-3bba558c {
+  width: 160rpx;
+}
+.container .img-name-box .name.data-v-3bba558c {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.container .info-box .info-content.data-v-3bba558c {
+  width: 92%;
+  margin: 0 auto;
+  position: relative;
+  top: -129rpx;
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.06);
+}
+.container .info-box .info-content .info-item.data-v-3bba558c {
+  display: flex;
+  padding: 12px 8px;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 16px;
+}
+.container .info-box .info-content .info-item.data-v-3bba558c:last-child {
+  border: none;
+}
+.container .info-box .info-content .info-item .item-text.data-v-3bba558c {
+  width: 58%;
+  margin-left: 6px;
+}
+.container .info-box .info-content .info-item .class-box.data-v-3bba558c {
+  width: 74%;
+}
+.container .info-box .info-content .info-item .class-box .class-item.data-v-3bba558c {
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  display: inline-block;
+  border-radius: 18px;
+  background-color: #20517f;
+}
+.container .info-box .info-content .info-item .class-box .class-item .icon-del.data-v-3bba558c {
+  position: absolute;
+  right: -7px;
+  top: -9px;
+}
+.container .info-box .info-content .info-item .class-box .icon-box.data-v-3bba558c {
+  display: flex;
+  padding-top: 6px;
+}
+.container .info-box .info-content .info-item .class-box .icon-box .icon-add.data-v-3bba558c,
+.container .info-box .info-content .info-item .class-box .icon-box .icon-redo.data-v-3bba558c {
+  padding-left: 16px;
+}
+.container .info-box .info-content .picker-view.data-v-3bba558c {
+  width: 690rpx;
+  height: 500rpx;
+  margin-top: 20rpx;
+}
+.container .info-box .info-content .item.data-v-3bba558c {
+  line-height: 100rpx;
+  text-align: center;
+}
+.container .info-box .btn-submit.data-v-3bba558c {
+  position: relative;
+  top: -50rpx;
+  width: 80%;
+  background-color: #d4e4ff;
+}
+

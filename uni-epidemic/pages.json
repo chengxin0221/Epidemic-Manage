@@ -1,0 +1,177 @@
+{
+  "pages": [{
+    "path": "pages/home/home",
+    "style": {
+      // 下拉刷新
+      "enablePullDownRefresh": true,
+      "backgroundColor": "#F8F8F8"
+    }
+  }, {
+    "path": "pages/my/my"
+  }],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序需要使用您的位置信息 已确认您的采样地址"
+    }
+  },
+  "subPackages": [{
+      "root": "subpkg",
+      "pages": [{
+        "path": "epidemic/epidemic",
+        "style": {
+          "navigationBarTitleText": "疫情资讯"
+        }
+      }, {
+        "path": "health/health",
+        "style": {
+          "navigationBarTitleText": "健康打卡"
+        }
+      }, {
+        "path": "daka/daka",
+        "style": {
+          "navigationBarTitleText": "健康打卡"
+        }
+      }, {
+        "path": "personalInfo/personalInfo",
+        "style": {
+          "navigationBarTitleText": "个人信息"
+        }
+      }, {
+        "path": "login/login",
+        "style": {
+          "navigationBarTitleText": "登录"
+        }
+      }, {
+        "path": "application/application",
+        "style": {
+          "navigationBarTitleText": "申请"
+        }
+      }, {
+        "path": "applicationRecord/applicationRecord",
+        "style": {
+          "navigationBarTitleText": "申请记录"
+        }
+      }, {
+        "path": "announcement/announcement"
+      }, {
+        "path": "noticePage/noticePage",
+        "style": {
+          "navigationBarTitleText": "疫情防控公告"
+        }
+      }, {
+        "path": "epidemicInfo/epidemicInfo",
+        "style": {
+          "navigationBarTitleText": "疫情资讯"
+        }
+      }, {
+        "path": "modifyPwd/modifyPwd",
+        "style": {
+          "navigationBarTitleText": "修改密码"
+        }
+      }, {
+        "path": "applyDetail/applyDetail",
+        "style": {
+          "navigationBarTitleText": "申请记录详情"
+        }
+      }, {
+        "path": "QRCode/QRCode",
+        "style": {
+          "navigationBarTitleText": "返校/外出二维码"
+        }
+      }]
+    },
+    {
+      "root": "subpkg_admin",
+      "pages": [{
+        "path": "daily/daily",
+        "style": {
+          "navigationBarTitleText": "健康日报",
+          "enablePullDownRefresh": true
+        }
+      }, {
+        "path": "classesManage/classesManage",
+        "style": {
+          "navigationBarTitleText": "管理班级"
+        }
+      }, {
+        "path": "examination/examination",
+        "style": {
+          "navigationBarTitleText": "申请审批"
+        }
+      }, {
+        "path": "addEpidemicInfo/addEpidemicInfo",
+        "style": {
+          "navigationBarTitleText": "发布资讯"
+        }
+      }, {
+        "path": "addNotice/addNotice",
+        "style": {
+          "navigationBarTitleText": "发布公告"
+        }
+      }, {
+        "path": "userManage/userManage",
+        "style": {
+          "navigationBarTitleText": "用户管理"
+        }
+      }, {
+        "path": "addUser/addUser",
+        "style": {
+          "navigationBarTitleText": "添加用户"
+        }
+      }, {
+        "path": "searchUser/searchUser",
+        "style": {
+          "navigationBarTitleText": "搜索用户"
+        }
+      }, {
+        "path": "schoolStructure/schoolStructure",
+        "style": {
+          "navigationBarTitleText": "学校结构"
+        }
+      }, {
+        "path": "healthState/healthState",
+        "style": {
+          "navigationBarTitleText": "健康打卡情况"
+        }
+      }, {
+        "path": "healthDetail/healthDetail",
+        "style": {
+          "navigationBarTitleText": "打卡情况详细报告"
+        }
+
+      }, {
+        "path": "reviewRecord/reviewRecord",
+        "style": {
+          "navigationBarTitleText": "审批记录"
+        }
+
+      }]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "校园疫情防控",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff",
+    "app-plus": {
+      "background": "#efeff4"
+    }
+  },
+  "tabBar": {
+    // 设置选中的tabBar项的文字颜色
+    "selectedColor": "#4f8dff",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"
+      }
+    ]
+  }
+}

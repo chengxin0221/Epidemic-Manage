@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "返校/外出二维码",
+  "usingComponents": {
+    "u-qrcode": "/uni_modules/Sansnn-uQRCode/components/u-qrcode/u-qrcode"
+  }
+}

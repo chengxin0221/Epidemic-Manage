@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container.data-v-561e094e {
+  text-align: center;
+}
+.container .login-img.data-v-561e094e {
+  width: 400rpx;
+  height: 374rpx;
+  margin-top: 35px;
+}
+.container .login-body.data-v-561e094e {
+  margin: 20px 30px;
+}
+.container .login-body .login-item.data-v-561e094e {
+  padding: 10px 10px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #999;
+}
+.container .login-body .login-item .picker-item.data-v-561e094e {
+  margin-left: 10px;
+}
+.container .login-body .login-item .input-item.data-v-561e094e {
+  width: 69%;
+  height: 28px;
+  margin: 10px;
+  text-align: left;
+}
+.container .btn-login.data-v-561e094e {
+  width: 256px;
+  margin: 30px auto 14px;
+  border-radius: 18px;
+  background-color: #c8d9ff;
+}
+.container .ather-choice.data-v-561e094e {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.container .ather-choice .choice-text.data-v-561e094e {
+  color: #777779;
+  font-size: 16px;
+}
+

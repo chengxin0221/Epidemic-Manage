@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.modify-box {
+  width: 80%;
+  margin: 60px auto;
+}
+.modify-box .modify-item {
+  padding: 10px 10px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #0f0fff;
+}
+.modify-box .modify-item .input-item {
+  width: 69%;
+  height: 28px;
+  margin: 10px;
+  text-align: left;
+}
+.modify-box .btn-modify {
+  width: 256px;
+  margin: 30px auto 14px;
+  border-radius: 18px;
+  background-color: #c8d9ff;
+}
+

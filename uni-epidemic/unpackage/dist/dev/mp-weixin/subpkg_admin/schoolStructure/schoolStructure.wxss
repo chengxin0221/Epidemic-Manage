@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container .college-box.data-v-7370860a {
+  width: 93%;
+  padding: 16px 4px;
+  margin: 20px auto 0px;
+  border-radius: 14px;
+  border: 1px solid #20517f;
+  box-shadow: 3px -3px 0 #20517f;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 3px;
+  z-index: 999;
+}
+.container .college-box .choose-box.data-v-7370860a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+}
+.container .college-box .choose-box .picker-box.data-v-7370860a {
+  width: 66%;
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 18px;
+  color: white;
+  background-color: #20517f;
+}
+.container .college-box .choose-box .picker-box .icon-bottom.data-v-7370860a {
+  float: right;
+}
+.container .outter-box.data-v-7370860a {
+  width: 94%;
+  padding: 20px 4px;
+  margin: 10px auto;
+  border-radius: 14px;
+  background-color: #20517f;
+}
+.container .outter-box .choose-box.data-v-7370860a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+.container .outter-box .choose-box .picker-box.data-v-7370860a {
+  width: 66%;
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 18px;
+  color: #20517f;
+  background-color: white;
+}
+.container .outter-box .choose-box .picker-box .icon-bottom.data-v-7370860a {
+  float: right;
+}
+.container .outter-box .manage-box.data-v-7370860a {
+  margin-top: 10px;
+}
+.container .outter-box .manage-box .item.data-v-7370860a {
+  width: 42%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 8px 5px;
+  margin: 5px 5px;
+  color: #20517f;
+  border-radius: 18px;
+  background-color: white;
+}
+.container .outter-box .manage-box .item .icon-del.data-v-7370860a {
+  position: absolute;
+  right: -7px;
+  top: -9px;
+}
+.container .outter-box .manage-box .icon-add.data-v-7370860a {
+  margin: 10px 0 10px 55px;
+  position: relative;
+  top: 3px;
+  right: -6px;
+}
+.container .outter-box .manage-box .icon-box.data-v-7370860a {
+  display: flex;
+  padding-top: 6px;
+}
+.container .outter-box .manage-box .icon-box .icon-item.data-v-7370860a {
+  padding-left: 28px;
+}
+

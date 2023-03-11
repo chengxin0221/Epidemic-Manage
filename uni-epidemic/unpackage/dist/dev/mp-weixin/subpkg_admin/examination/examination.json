@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "申请审批",
+  "usingComponents": {
+    "my-btstable": "/components/my-btstable/my-btstable",
+    "my-outtable": "/components/my-outtable/my-outtable"
+  }
+}

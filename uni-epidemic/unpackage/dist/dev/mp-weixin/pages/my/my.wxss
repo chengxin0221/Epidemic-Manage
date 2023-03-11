@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container .unlogin-container.data-v-0be17cc6 {
+  text-align: center;
+}
+.container .unlogin-container .unlogin-img.data-v-0be17cc6 {
+  width: 446rpx;
+  height: 426rpx;
+  margin-top: 72px;
+}
+.container .unlogin-container .btn-login.data-v-0be17cc6 {
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 18px;
+  background-color: #c8d9ff;
+}
+.container .unlogin-container .tip-text.data-v-0be17cc6 {
+  font-size: 14px;
+  color: #5f5d5d;
+  margin-top: 15px;
+}
+.container .personal-container .img-name-box.data-v-0be17cc6 {
+  height: 400rpx;
+  background-color: #d4e4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+.container .personal-container .img-name-box .img-box.data-v-0be17cc6 {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.container .personal-container .img-name-box .img-box .per-img.data-v-0be17cc6 {
+  width: 160rpx;
+}
+.container .personal-container .img-name-box .name.data-v-0be17cc6 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.container .personal-container .service-box.data-v-0be17cc6 {
+  position: relative;
+  top: -129rpx;
+  margin: 0 24px;
+  background-color: white;
+  border: 1px solid #ebebeb;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.06);
+}
+.container .personal-container .service-box.data-v-0be17cc6 :last-child {
+  border-bottom: none;
+}
+.container .personal-container .service-box .service.data-v-0be17cc6 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 16px;
+  align-items: center;
+}
+.container .personal-container .service-box .service.data-v-0be17cc6:last-child {
+  border: none;
+}
+.container .personal-container .service-box .service .ws-text.data-v-0be17cc6 {
+  color: #7979f5;
+  font-size: 12px;
+  position: relative;
+  left: -26px;
+}
+.container .personal-container .btn-logout.data-v-0be17cc6 {
+  position: relative;
+  top: -50rpx;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 18px;
+  background-color: #dce6fd;
+}
+

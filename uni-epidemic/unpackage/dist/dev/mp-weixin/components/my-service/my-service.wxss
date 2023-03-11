@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10px 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.06);
+}
+.service .service-item {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 6px;
+  box-sizing: border-box;
+}
+.service .service-item .service-img {
+  width: 64rpx;
+  height: 72rpx;
+  margin-bottom: 5px;
+}
+

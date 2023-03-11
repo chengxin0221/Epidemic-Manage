@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container .nav-bar.data-v-6fd9db9c {
+  display: flex;
+  text-align: center;
+}
+.container .nav-bar .nav-item.data-v-6fd9db9c {
+  width: 50%;
+  height: 36px;
+  line-height: 36px;
+}
+.container .content-item.data-v-6fd9db9c {
+  padding: 10px;
+  font-size: 16px;
+}
+.container .content-item .tip-box.data-v-6fd9db9c {
+  color: red;
+  font-size: 12px;
+}
+.container .content-item .picker-box.data-v-6fd9db9c {
+  width: 65%;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 20px;
+  border: 1px solid #1750ad;
+}
+.container .content-item .picker-box .picker-item.data-v-6fd9db9c {
+  margin-left: 10px;
+}
+.container .content-item .picker-box .picker-item .icon-bottom.data-v-6fd9db9c {
+  float: right;
+}
+.container .content-item .input-item.data-v-6fd9db9c {
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 20px;
+  border: 1px solid #1750ad;
+}
+.container .btn-submit.data-v-6fd9db9c {
+  width: 60%;
+  margin: 14px auto;
+  border-radius: 12px;
+  color: white;
+  background-color: #447cb1;
+}
+

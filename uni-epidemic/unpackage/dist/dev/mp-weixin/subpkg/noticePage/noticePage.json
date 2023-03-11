@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "疫情防控公告",
+  "usingComponents": {
+    "my-search": "/components/my-search/my-search",
+    "uni-swipe-action": "/uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action",
+    "uni-swipe-action-item": "/uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item",
+    "my-notice": "/components/my-notice/my-notice",
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons"
+  }
+}

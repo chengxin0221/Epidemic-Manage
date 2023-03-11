@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container .daka-box.data-v-edab9a8c {
+  width: 86%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 18px;
+  background-color: #d4e4ff;
+  box-shadow: 4px -4px 0 #9aa6e0;
+}
+.container .daka-box .daka-title.data-v-edab9a8c {
+  display: flex;
+  flex-direction: column;
+}
+.container .daka-box .daka-title .today.data-v-edab9a8c {
+  color: #3a3737;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.container .daka-box .daka-content.data-v-edab9a8c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.container .daka-box .daka-content .daka-btn.data-v-edab9a8c {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  margin-top: 20px;
+  background-color: white;
+  font-size: 16px;
+}
+.container .daka-box .daka-content .daka-btn .icon-daka.data-v-edab9a8c {
+  height: 30px;
+  position: relative;
+  top: -10px;
+}
+.container .record .record-title.data-v-edab9a8c {
+  padding: 10px;
+  font-size: 18px;
+}
+

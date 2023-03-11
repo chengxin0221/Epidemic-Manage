@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my"
+  ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "epidemic/epidemic",
+        "health/health",
+        "daka/daka",
+        "personalInfo/personalInfo",
+        "login/login",
+        "application/application",
+        "applicationRecord/applicationRecord",
+        "announcement/announcement",
+        "noticePage/noticePage",
+        "epidemicInfo/epidemicInfo",
+        "modifyPwd/modifyPwd",
+        "applyDetail/applyDetail",
+        "QRCode/QRCode"
+      ]
+    },
+    {
+      "root": "subpkg_admin",
+      "pages": [
+        "daily/daily",
+        "classesManage/classesManage",
+        "examination/examination",
+        "addEpidemicInfo/addEpidemicInfo",
+        "addNotice/addNotice",
+        "userManage/userManage",
+        "addUser/addUser",
+        "searchUser/searchUser",
+        "schoolStructure/schoolStructure",
+        "healthState/healthState",
+        "healthDetail/healthDetail",
+        "reviewRecord/reviewRecord"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "校园疫情防控",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#4f8dff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取当前位置"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "usingComponents": {}
+}

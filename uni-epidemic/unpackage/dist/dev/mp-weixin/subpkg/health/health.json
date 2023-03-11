@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "健康打卡",
+  "usingComponents": {
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "my-dakatable": "/components/my-dakatable/my-dakatable"
+  }
+}

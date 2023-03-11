@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "管理班级",
+  "usingComponents": {
+    "my-usertable": "/components/my-usertable/my-usertable"
+  }
+}

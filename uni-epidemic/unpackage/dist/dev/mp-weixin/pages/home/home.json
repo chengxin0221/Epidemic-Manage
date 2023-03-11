@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#F8F8F8",
+  "usingComponents": {
+    "my-service": "/components/my-service/my-service",
+    "my-notice": "/components/my-notice/my-notice"
+  }
+}

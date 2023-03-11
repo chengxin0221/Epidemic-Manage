@@ -1,0 +1,1 @@
+<view class="container"><view class="in-box"><view class="record-title">返校申请记录：</view><my-btstable vue-id="7c0d30c8-1" btsApply="{{btsApply}}" bind:__l="__l"></my-btstable></view><view class="out-box"><view class="record-title">外出申请记录：</view><my-outtable vue-id="7c0d30c8-2" outApply="{{outApply}}" bind:__l="__l"></my-outtable></view></view>

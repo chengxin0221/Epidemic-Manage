@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.container {
+  padding: 10px 10px 40px;
+}
+.container .title {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.container .author-date-box {
+  color: #415e92;
+}
+.container .author-date-box .date {
+  margin-left: 10px;
+  color: #797878;
+  font-size: 14px;
+  line-height: 21px;
+}
+.container .content {
+  position: relative;
+  margin: 20px 5px;
+  padding: 20px 10px 60px;
+  background-color: #bde3f7;
+}
+.container .content .footer {
+  position: absolute;
+  text-align: center;
+  bottom: 8px;
+  right: 10px;
+}
+.container .img {
+  width: 97%;
+  margin: 5px;
+}
+.container .editor-box {
+  color: #797878;
+  margin: 40px 0;
+  padding: 10px;
+  border-top: 1px dashed #415e92;
+}
+.container .editor-box .box-text {
+  margin-bottom: 6px;
+}
+
