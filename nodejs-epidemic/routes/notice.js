@@ -37,7 +37,7 @@ router.post('/addNotice', (req, res) => {
 router.get('/api/notice', (req, res) => {
     const id = req.query.id;
     // 获取所有公告信息
-    var sql = `select * from notice order by id desc`;
+    var sql = `select * from notice order by date desc`;
     if (id) {
         sql = `select * from notice where id='${id}'`;
     }

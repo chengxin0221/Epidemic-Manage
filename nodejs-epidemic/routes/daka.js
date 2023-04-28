@@ -18,7 +18,7 @@ router.post('/addDaka', (req, res) => {
         daka.confirm = '';
         daka.rescure = '';
     }
-    // 添加公告信息
+    // 添加打卡信息到数据库
     const sql = `insert into daka(uid,uname,className,date,temperature,vaccine,sickness,confirm,rescure,address,residence,phone) values('${daka.uid}','${daka.uname}','${daka.className}','${daka.date}','${daka.temperature}','${daka.vaccine}','${daka.sickness}','${daka.confirm}','${daka.rescure}','${daka.address}','${daka.residence}','${daka.phone}')`;
     // console.log(sql)
     db.query(sql, function (err, results) {
@@ -125,7 +125,7 @@ router.get('/allDakaSituation', (req, res) => {
 // @desc    查询全校学生打卡详细情况报告
 // @access  public
 router.get('/schoolDakaReport', (req, res) => {
-    // console.log(req.query,'========sc==');
+    console.log(req.query,'========sc==');
     // 查询全校发热学生名单
     const sql1 = `select * from daka where date = '${req.query.date}' and temperature = '发热' order by uid asc`;
     // 查询全校未完成3针疫苗接种学生名单

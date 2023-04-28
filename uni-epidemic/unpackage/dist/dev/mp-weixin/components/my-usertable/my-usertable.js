@@ -286,7 +286,7 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
           // 新值为false时
           // 情景1：当选中的数组长度为0时，对有复选框的数据列表进行遍历，设置checked为false
           // 情景2：当选中的数组长度和有复选框的数据列表长度相等时，对有复选框的数据列表进行遍历，设置checked为false
-          if (this.checkedList.length == 0 || this.checkedList.length == this.dataList.length) {
+          if (this.checkedList.length == 0 || this.checkedList.length === this.dataList.length) {
             this.dataList.forEach(function (item) {
               _this.$set(item, 'checked', false);
             });
@@ -314,12 +314,18 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
   methods: _objectSpread(_objectSpread({},
   (0, _vuex.mapMutations)('user', ['updateUserData'])), {}, {
     // 全选复选框的改变事件
-    checkAll: function checkAll(e) {
+    checkAll: function checkAll(e) {var _this2 = this;
       // 当有选中的值时，即全选复选框被勾选，则应为全选状态
       if (e.detail.value.length > 0) {
         this.selectAll = true;
       } else {
         this.selectAll = false;
+      }
+      // console.log(this.selectAll,'--')
+      if (!this.selectAll) {
+        this.dataList.forEach(function (item) {
+          _this2.$set(item, 'checked', false);
+        });
       }
     },
     // 复选框
@@ -345,12 +351,13 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
     },
     // 删除用户
     delUser: function delUser(type) {
-      if (this.selectAll && this.checkedList.length === 0) {
+      if (this.selectAll && this.checkedList.length < this.dataList.length) {
         var list = [];
         this.dataList.forEach(function (item) {
           list.push(item.uid);
         });
         if (list.length === 0) return uni.$showMsg('未选择要删除的用户');
+        // console.log(list,'==')
         this.$emit('del', type, list);
       } else {
         if (this.checkedList.length === 0) return uni.$showMsg('未选择要删除的用户');

@@ -30,16 +30,16 @@ router.post('/addbtsApply', (req, res) => {
 // @access  public
 router.get('/btsApply', (req, res) => {
     // 查询登录用户的返校申请记录
-    let sql = `select * from btsapply where uid = '${req.user.uid}' order by applyTime desc`;
+    let sql = `select * from btsapply where uid = '${req.user.uid}' order by backDate asc`;
     // 查询某一条记录的信息加上申请人的个人信息
     if(req.query.id) sql = `select btsapply.*, user.professional, user.college from btsapply inner join user on btsapply.id = '${req.query.id}' and btsapply.uid = user.uid`;
     // 查询某一班级学生的记录
     if(req.query.className){
-        sql = `select * from btsapply where className = '${req.query.className}' order by applyTime desc`;
+        sql = `select * from btsapply where className = '${req.query.className}' order by backDate asc`;
     }
     // 查询某个学院学生的记录
     if(req.query.college){
-        sql = `select btsapply.*, user.professional, user.college from btsapply inner join user on btsapply.applyTime like '${req.query.applyDate}%' and btsapply.uid = user.uid and user.college = '${req.query.college}' order by applyTime,uid asc`;
+        sql = `select btsapply.*, user.professional, user.college from btsapply inner join user on btsapply.applyTime like '${req.query.applyDate}%' and btsapply.uid = user.uid and user.college = '${req.query.college}' order by backDate asc`;
     }
     // console.log(sql);
     db.query(sql, function (err, results) {

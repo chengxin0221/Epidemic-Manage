@@ -36,11 +36,12 @@
 .container .ather-choice.data-v-561e094e {
   width: 75%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
 }
 .container .ather-choice .choice-text.data-v-561e094e {
   color: #777779;
   font-size: 16px;
+}
+.container .ather-choice .center.data-v-561e094e {
+  align-items: center;
 }
 

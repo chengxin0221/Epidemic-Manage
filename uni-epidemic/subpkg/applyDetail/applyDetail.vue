@@ -66,7 +66,7 @@
       <block v-if="userInfo.userType === '教师' || userInfo.userType==='管理员'">
         <view class="record-item">
           <view class="t-item">审核状态：</view>
-          <view class="t-item" :style="{'color': si !== '1' ? '#fc2407' : '#003eba' }">
+          <view class="t-item" :style="{'color': btsRecord.state !== '审核通过' ? '#fc2407' : '#003eba' }">
             <view class="picker-box">
               <picker @change="stateChange" :value="si" :range="stateArr">
                 {{btsRecord.state}}
@@ -164,7 +164,7 @@
       <block v-if="userInfo.userType === '教师' || userInfo.userType==='管理员'">
         <view class="record-item">
           <view class="t-item">审核状态：</view>
-          <view class="t-item" :style="{'color': si !== '1' ? '#fc2407' : '#003eba' }">
+          <view class="t-item" :style="{'color': outRecord.state !== '审核通过' ? '#fc2407' : '#003eba' }">
             <view class="picker-box">
               <picker @change="stateChange" :value="si" :range="stateArr">
                 {{outRecord.state}}
@@ -190,9 +190,9 @@
       </view>
     </view>
     <!-- 删除按钮 -->
-    <button v-if="userInfo.userType==='学生'" class="btn-del" @click="clickDel">删除</button>
+    <button v-if="userInfo.userType==='学生'" class="btn-del" @click="clickDel" :disabled="state" :style="{'opacity': state ? 0.6 : 1}">删除</button>
     <!-- 审核按钮 -->
-    <button v-if="userInfo.userType==='教师' || userInfo.userType==='管理员'" class="btn-del" @click="review">审核</button>
+    <button v-if="userInfo.userType==='教师' || userInfo.userType==='管理员'" class="btn-del" @click="review" :disabled="state" :style="{'opacity': state ? 0.6 : 1}">审核</button>
   </view>
 </template>
 
@@ -223,6 +223,8 @@
         btsRecord: {},
         // 外出申请记录
         outRecord: {},
+        // 是否审核过了
+        state: false,
         // 审核状态列表
         si: 0,
         stateArr: ['待审核', '审核通过', '审核不通过']
@@ -244,11 +246,13 @@
           // 返校申请记录
           this.btsRecord = this.type === '返校' ? {
             ...res.data.btsApply[0]
-          } : {},
+          } : {};
+          if(this.type === '返校' && this.btsRecord.state !== '待审核') this.state = true
           // 外出申请记录
           this.outRecord = this.type === '外出' ? {
             ...res.data.outApply[0]
-          } : {}
+          } : {};
+          if(this.type === '外出' && this.outRecord.state !== '待审核') this.state = true
           if (this.userInfo.userType === '教师' || this.userInfo.userType === '管理员') {
             if (this.type === '返校') {
               this.btsRecord.reviewTime = this.btsRecord.reviewTime !== null ? this.btsRecord.reviewTime : uni.$getDate('time')
@@ -321,6 +325,8 @@
       async review() {
         var res;
         if (this.type === '返校') {
+          if(this.btsRecord.state === '待审核') return uni.$showMsg('请选择审核状态！')
+          if(!this.btsRecord.opinion) return uni.$showMsg('请填写审核意见！')
           this.btsRecord.reviewTime = uni.$getDate('time')
           this.btsRecord.reviewBy = this.userInfo.uname
           res = await uni.$http.post('/btsReview', this.btsRecord)

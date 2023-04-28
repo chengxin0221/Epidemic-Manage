@@ -30,16 +30,16 @@ router.post('/addoutApply', (req, res) => {
 // @access  public
 router.get('/outApply', (req, res) => {
     // 查询外出申请记录
-    let sql = `select * from outapply where uid = '${req.user.uid}' order by applyTime desc`;
+    let sql = `select * from outapply where uid = '${req.user.uid}' order by outTime asc`;
     // 查询某一条记录的信息加上申请人的个人信息
     if(req.query.id) sql = `select outapply.*, user.professional, user.college from outapply inner join user on outapply.id = '${req.query.id}' and outapply.uid = user.uid`;
     // 查询某一班级学生的记录
     if(req.query.className){
-        sql = `select * from outapply where className = '${req.query.className}' order by applyTime desc`;
+        sql = `select * from outapply where className = '${req.query.className}' order by outTime asc`;
     }
     // 查询某个学院学生的记录
     if(req.query.college){
-        sql = `select outapply.*, user.professional, user.college from outapply inner join user on outapply.applyTime like '${req.query.applyDate}%' and outapply.uid = user.uid and user.college = '${req.query.college}' order by applyTime,uid asc`;
+        sql = `select outapply.*, user.professional, user.college from outapply inner join user on outapply.applyTime like '${req.query.applyDate}%' and outapply.uid = user.uid and user.college = '${req.query.college}' order by outTime asc`;
     }
     // console.log(sql);
     db.query(sql, function (err, results) {

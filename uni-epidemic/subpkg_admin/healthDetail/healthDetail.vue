@@ -136,7 +136,7 @@
       // 获取详细报告
       async getDetail(data) {
         let url = '/collegeDakaReport'
-        if (data.college) url = '/schoolDakaReport'
+        if (!data.college) url = '/schoolDakaReport'
         if (data.classList) url = '/classDakaReport'
         const res = await uni.$http.get(url, {
           college: data.college,

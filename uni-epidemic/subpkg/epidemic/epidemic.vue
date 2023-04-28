@@ -6,14 +6,16 @@
       <my-search @click="search"></my-search>
     </view>
     <!-- 疫情资讯 -->
-    <uni-swipe-action>
-      <view class="info-box" v-for="(item,index) in epidemicInfo" :key="index" @longpress="manageInfo">
-        <!-- 非管理员的时候禁用滑动isForbid为false -->
-        <uni-swipe-action-item :right-options="options" @click="swipeActionClick($event, item)" :disabled="isForbid">
-          <my-zixun :zixun="item" :isShow="isShow" @radioChange="radioChange(item.id)"></my-zixun>
-        </uni-swipe-action-item>
-      </view>
-    </uni-swipe-action>
+    <view class="data-list">
+      <uni-swipe-action>
+        <view class="info-box" v-for="(item,index) in epidemicInfo" :key="index" @longpress="manageInfo">
+          <!-- 非管理员的时候禁用滑动isForbid为false -->
+          <uni-swipe-action-item :right-options="options" @click="swipeActionClick($event, item)" :disabled="isForbid">
+            <my-zixun :zixun="item" :isShow="isShow" @radioChange="radioChange(item.id)"></my-zixun>
+          </uni-swipe-action-item>
+        </view>
+      </uni-swipe-action>
+    </view>
     <!-- 显示所有公告信息按钮 -->
     <view class="btn-backToAll" v-if="backToAll" @click="showAll">
       <uni-icons class="icon-redo" type="undo-filled" color="#5384cc" size="30"></uni-icons>
@@ -234,6 +236,11 @@
     // 提高层级，防止被轮播图覆盖
     z-index: 999;
   }
+  
+  // 所有资讯信息外层容器
+  .data-list {
+    padding-bottom: 44px;
+  }
 
   // 显示所有公告信息按钮
   .btn-backToAll {
@@ -257,7 +264,8 @@
   .del-box {
     display: flex;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
+    background-color: white;
     bottom: 0;
     z-index: 999;
     width: 100%;

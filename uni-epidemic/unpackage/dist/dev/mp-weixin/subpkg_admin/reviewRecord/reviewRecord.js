@@ -214,7 +214,7 @@ var _beforeIntoAdminpage = _interopRequireDefault(__webpack_require__(/*! @/mixi
 {
   // 只有管理员类型的用户可进入该页面
   mixins: [_beforeIntoAdminpage.default],
-  onLoad: function onLoad() {
+  onShow: function onShow() {
     // 获取学院信息
     this.getCollege();
   },

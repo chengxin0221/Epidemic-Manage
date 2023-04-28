@@ -51,7 +51,7 @@
   export default {
     // 只有管理员类型的用户可进入该页面
     mixins: [intopageMix],
-    onLoad() {
+    onShow() {
       // 获取学院信息
       this.getCollege()
     },

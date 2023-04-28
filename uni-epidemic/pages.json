@@ -138,13 +138,11 @@
         "style": {
           "navigationBarTitleText": "打卡情况详细报告"
         }
-
       }, {
         "path": "reviewRecord/reviewRecord",
         "style": {
           "navigationBarTitleText": "审批记录"
         }
-
       }]
     }
   ],

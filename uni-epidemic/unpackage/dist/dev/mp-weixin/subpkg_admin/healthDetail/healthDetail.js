@@ -296,7 +296,7 @@ var _beforeIntoTeadpage = _interopRequireDefault(__webpack_require__(/*! @/mixin
     // 获取详细报告
     getDetail: function getDetail(data) {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var url, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 url = '/collegeDakaReport';
-                if (data.college) url = '/schoolDakaReport';
+                if (!data.college) url = '/schoolDakaReport';
                 if (data.classList) url = '/classDakaReport';_context.next = 5;return (
                   uni.$http.get(url, {
                     college: data.college,

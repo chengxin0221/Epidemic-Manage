@@ -10,7 +10,8 @@
         </view>
         <view class="notice-item">
           <view class="notice-title">公告内容：</view>
-          <textarea class="notice-textarea" v-model="newNotice.content" placeholder="请输入公告内容"></textarea>
+          <!-- 最大输入长度，设置为 -1 的时候不限制最大长度 -->
+          <textarea class="notice-textarea" v-model="newNotice.content" placeholder="请输入公告内容" maxlength="-1"></textarea>
         </view>
         <!-- 公告配图 -->
         <view class="notice-item">

@@ -21,10 +21,10 @@
     <button class="btn-login" open-type="getUserInfo" @getuserinfo="getUserInfo">登录</button>
     <!-- 别的选项 -->
     <view class="ather-choice">
-      <view class="choice-text" @click="forget">
+      <!-- <view class="choice-text" @click="forget">
         忘记密码
-      </view>
-      <view class="choice-text" @click="notLogin">
+      </view> -->
+      <view class="choice-text center" @click="notLogin">
         以游客的身份访问
       </view>
     </view>
@@ -161,13 +161,17 @@
     .ather-choice {
       width: 75%;
       margin: auto;
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
 
       // 忘记密码 以及 不登录以游客身份访问 文字
       .choice-text {
         color: #777779;
         font-size: 16px;
+      }
+      
+      .center {
+        align-items: center;
       }
     }
   }

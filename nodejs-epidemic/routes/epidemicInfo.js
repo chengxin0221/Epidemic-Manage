@@ -39,7 +39,7 @@ router.post('/addEpidemicInfo', (req, res) => {
 router.get('/api/epidemicInfo', (req, res) => {
     const id = req.query.id;
     // 获取所有资讯信息
-    var sql = `select * from epidemicInfo order by id desc`;
+    var sql = `select * from epidemicInfo order by date desc`;
     if (id) {
         sql = `select * from epidemicInfo where id='${id}'`;
     }

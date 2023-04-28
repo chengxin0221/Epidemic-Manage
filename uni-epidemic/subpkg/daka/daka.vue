@@ -189,7 +189,8 @@
       },
       // 点击提交按钮
       async formSubmit() {
-        if (!this.dakaData.address || !this.dakaData.residence || !this.dakaData.residence || !this.dakaData.phone)
+        // 判断当前所在位置、户籍所在地、电话是否已填写完整
+        if (!this.dakaData.address || !this.dakaData.residence || !this.dakaData.phone)
           return uni.$showMsg('未填写完整')
         // /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/ 手机号验证正则表达式
         if (!/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/.test(this.dakaData.phone))

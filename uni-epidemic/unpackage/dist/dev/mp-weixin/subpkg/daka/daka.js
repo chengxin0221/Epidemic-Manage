@@ -346,7 +346,8 @@ var _beforeNologinIntoPage = _interopRequireDefault(__webpack_require__(/*! @/mi
     },
     // 点击提交按钮
     formSubmit: function formSubmit() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!(
-                !_this.dakaData.address || !_this.dakaData.residence || !_this.dakaData.residence || !_this.dakaData.phone)) {_context.next = 2;break;}return _context.abrupt("return",
+
+                !_this.dakaData.address || !_this.dakaData.residence || !_this.dakaData.phone)) {_context.next = 2;break;}return _context.abrupt("return",
                 uni.$showMsg('未填写完整'));case 2:if (
 
                 /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/.test(_this.dakaData.phone)) {_context.next = 4;break;}return _context.abrupt("return",

@@ -407,6 +407,8 @@ var _beforeNologinIntoPage = _interopRequireDefault(__webpack_require__(/*! @/mi
       btsRecord: {},
       // 外出申请记录
       outRecord: {},
+      // 是否审核过了
+      state: false,
       // 审核状态列表
       si: 0,
       stateArr: ['待审核', '审核通过', '审核不通过'] };
@@ -424,15 +426,17 @@ var _beforeNologinIntoPage = _interopRequireDefault(__webpack_require__(/*! @/mi
 
 
                 res.statusCode !== 200)) {_context.next = 6;break;}return _context.abrupt("return", uni.$showMsg('获取申请详细信息失败！'));case 6:if (!(
-                res.data.status === 0)) {_context.next = 11;break;}
+                res.data.status === 0)) {_context.next = 14;break;}
                 // 返校申请记录
                 _this.btsRecord = _this.type === '返校' ? _objectSpread({},
                 res.data.btsApply[0]) :
-                {},
+                {};
+                if (_this.type === '返校' && _this.btsRecord.state !== '待审核') _this.state = true;
                 // 外出申请记录
                 _this.outRecord = _this.type === '外出' ? _objectSpread({},
                 res.data.outApply[0]) :
                 {};
+                if (_this.type === '外出' && _this.outRecord.state !== '待审核') _this.state = true;
                 if (_this.userInfo.userType === '教师' || _this.userInfo.userType === '管理员') {
                   if (_this.type === '返校') {
                     _this.btsRecord.reviewTime = _this.btsRecord.reviewTime !== null ? _this.btsRecord.reviewTime : uni.$getDate('time');
@@ -441,15 +445,15 @@ var _beforeNologinIntoPage = _interopRequireDefault(__webpack_require__(/*! @/mi
                     _this.outRecord.reviewTime = _this.outRecord.reviewTime !== null ? _this.outRecord.reviewTime : uni.$getDate('time');
                     _this.outRecord.reviewBy = _this.outRecord.reviewBy !== null ? _this.outRecord.reviewBy : _this.userInfo.uname;
                   }
-                }_context.next = 16;break;case 11:if (!(
+                }_context.next = 19;break;case 14:if (!(
 
 
-                res.data.message === '身份认证失败！')) {_context.next = 15;break;}
+                res.data.message === '身份认证失败！')) {_context.next = 18;break;}
                 // 3秒后跳转登录
-                uni.$showTips();_context.next = 16;break;case 15:return _context.abrupt("return",
+                uni.$showTips();_context.next = 19;break;case 18:return _context.abrupt("return",
 
 
-                uni.$showMsg(res.data.message));case 16:case "end":return _context.stop();}}}, _callee);}))();
+                uni.$showMsg(res.data.message));case 19:case "end":return _context.stop();}}}, _callee);}))();
 
 
     },
@@ -504,31 +508,33 @@ var _beforeNologinIntoPage = _interopRequireDefault(__webpack_require__(/*! @/mi
     // 审核
     review: function review() {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!(
 
-                _this4.type === '返校')) {_context3.next = 8;break;}
+                _this4.type === '返校')) {_context3.next = 12;break;}if (!(
+                _this4.btsRecord.state === '待审核')) {_context3.next = 3;break;}return _context3.abrupt("return", uni.$showMsg('请选择审核状态！'));case 3:if (
+                _this4.btsRecord.opinion) {_context3.next = 5;break;}return _context3.abrupt("return", uni.$showMsg('请填写审核意见！'));case 5:
                 _this4.btsRecord.reviewTime = uni.$getDate('time');
-                _this4.btsRecord.reviewBy = _this4.userInfo.uname;_context3.next = 5;return (
-                  uni.$http.post('/btsReview', _this4.btsRecord));case 5:res = _context3.sent;_context3.next = 13;break;case 8:
+                _this4.btsRecord.reviewBy = _this4.userInfo.uname;_context3.next = 9;return (
+                  uni.$http.post('/btsReview', _this4.btsRecord));case 9:res = _context3.sent;_context3.next = 17;break;case 12:
 
                 _this4.outRecord.reviewTime = uni.$getDate('time');
-                _this4.outRecord.reviewBy = _this4.userInfo.uname;_context3.next = 12;return (
-                  uni.$http.post('/outReview', _this4.outRecord));case 12:res = _context3.sent;case 13:if (!(
+                _this4.outRecord.reviewBy = _this4.userInfo.uname;_context3.next = 16;return (
+                  uni.$http.post('/outReview', _this4.outRecord));case 16:res = _context3.sent;case 17:if (!(
 
 
-                res.statusCode !== 200)) {_context3.next = 15;break;}return _context3.abrupt("return", uni.$showMsg('出错了，请重新审核！'));case 15:if (!(
-                res.data.status === 0)) {_context3.next = 19;break;}
+                res.statusCode !== 200)) {_context3.next = 19;break;}return _context3.abrupt("return", uni.$showMsg('出错了，请重新审核！'));case 19:if (!(
+                res.data.status === 0)) {_context3.next = 23;break;}
                 uni.navigateBack({
                   complete: function complete() {
                     return uni.$showMsg('审核完成！');
-                  } });_context3.next = 24;break;case 19:if (!(
+                  } });_context3.next = 28;break;case 23:if (!(
 
 
 
-                res.data.message === '身份认证失败！')) {_context3.next = 23;break;}
+                res.data.message === '身份认证失败！')) {_context3.next = 27;break;}
                 // 3秒后跳转登录
-                uni.$showTips();_context3.next = 24;break;case 23:return _context3.abrupt("return",
+                uni.$showTips();_context3.next = 28;break;case 27:return _context3.abrupt("return",
 
 
-                uni.$showMsg(res.data.message));case 24:case "end":return _context3.stop();}}}, _callee3);}))();
+                uni.$showMsg(res.data.message));case 28:case "end":return _context3.stop();}}}, _callee3);}))();
 
 
     } } };exports.default = _default;

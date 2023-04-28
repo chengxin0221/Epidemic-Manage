@@ -124,7 +124,7 @@
             // 新值为false时
             // 情景1：当选中的数组长度为0时，对有复选框的数据列表进行遍历，设置checked为false
             // 情景2：当选中的数组长度和有复选框的数据列表长度相等时，对有复选框的数据列表进行遍历，设置checked为false
-            if (this.checkedList.length == 0 || this.checkedList.length == this.dataList.length) {
+            if (this.checkedList.length == 0 || this.checkedList.length === this.dataList.length) {
               this.dataList.forEach(item => {
                 this.$set(item, 'checked', false)
               })
@@ -159,6 +159,12 @@
         } else {
           this.selectAll = false
         }
+        // console.log(this.selectAll,'--')
+        if(!this.selectAll){
+          this.dataList.forEach(item => {
+            this.$set(item, 'checked', false)
+          })
+        }
       },
       // 复选框
       checkboxChange: function(e) {
@@ -183,12 +189,13 @@
       },
       // 删除用户
       delUser(type) {
-        if (this.selectAll && this.checkedList.length === 0) {
+        if (this.selectAll && this.checkedList.length < this.dataList.length) {
           let list = [];
           this.dataList.forEach(item => {
             list.push(item.uid)
           })
           if (list.length === 0) return uni.$showMsg('未选择要删除的用户')
+          // console.log(list,'==')
           this.$emit('del', type, list)
         } else {
           if (this.checkedList.length === 0) return uni.$showMsg('未选择要删除的用户')
